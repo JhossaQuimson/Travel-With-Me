@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">GlobeTrek Adventures</div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="countries.html">Countries</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Travel Blog</h1>
+  <div class="blog-grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=60" alt="Italy Post">
+      <h3>Exploring Ancient Rome</h3>
+      <p><em>March 2024</em></p>
+      <p>The Colosseum and Roman Forum are a must-see for history lovers.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=600&q=60" alt="Japan Post">
+      <h3>Spring in Japan</h3>
+      <p><em>April 2024</em></p>
+      <p>Cherry blossoms in Kyoto create a magical travel experience.</p>
+      <a href="#">Read More</a>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=60" alt="Egypt Post">
+      <h3>Discovering the Pyramids</h3>
+      <p><em>May 2024</em></p>
+      <p>Standing before the Great Pyramid of Giza is an unforgettable moment.</p>
+      <a href="#">Read More</a>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>Student Name: <strong>Student Name</strong></div>
+    <div>Class: <strong>Class Info</strong></div>
+    <div class="copyright">© <span id=\"year\"></span> GlobeTrek Adventures</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
