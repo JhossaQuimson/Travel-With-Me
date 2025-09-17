@@ -7,7 +7,7 @@
 
 html, body {
   font-family: Arial, sans-serif;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #fdf6e3, #f1f8ff);
@@ -25,7 +25,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* center navigation links */
+  justify-content: center;
   padding: 1rem 2rem;
   position: relative;
   gap: 2rem;
@@ -34,7 +34,7 @@ nav {
 nav .brand {
   font-weight: bold;
   font-size: 1.4rem;
-  position: absolute; /* keep brand on the left */
+  position: absolute;
   left: 2rem;
 }
 
@@ -59,18 +59,18 @@ nav .menu a.active {
 
 /* Hero Section */
 .hero {
-  flex: 1; /* fills remaining space */
+  flex: 1;
   display: flex;
-  align-items: center;    /* vertical centering */
-  justify-content: center; /* horizontal centering */
-  text-align: center;     /* center text inside hero-inner */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
   background-size: cover;
   background-position: center;
   padding: 2rem;
-  color: white;           /* hero text white */
-  min-height: calc(100vh - 60px); /* ensures hero fills most of viewport, adjust 60px if header height changes */
+  color: white;
+  min-height: calc(100vh - 60px);
 }
 
 .hero-inner {
@@ -114,42 +114,46 @@ nav .menu a.active {
   margin-bottom: 1.5rem;
 }
 
-/* Countries List */
-.countries-list {
+/* Countries Grid */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  padding: 2rem;
+  margin-top: 2rem;
 }
 
-.country-card {
+.card {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  padding: 1rem;
+  height: 250px;           /* uniform height */
   transition: transform 0.3s;
 }
 
-.country-card:hover {
-  transform: scale(1.05);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.country-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+.card img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain; /* keep aspect ratio */
+  margin-bottom: 1rem;
 }
 
-.country-card a {
-  display: block;
-  padding: 1rem;
-  font-weight: bold;
-  color: #ff6f61;
+.card h3 a {
   text-decoration: none;
+  color: #ff6f61;
+  font-weight: bold;
 }
 
-.country-card a:hover {
+.card h3 a:hover {
   text-decoration: underline;
 }
 
@@ -288,30 +292,25 @@ nav .menu a.active {
 }
 
 /* Footer */
-/* Footer */
 footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
   width: 100%;
-  position: relative; /* remove fixed */
-  bottom: auto;       /* reset bottom */
-  left: auto;         /* reset left */
-  z-index: auto;      /* reset z-index */
-  margin-top: auto;   /* push footer to bottom if content is short */
+  margin-top: auto; /* footer appears after content */
 }
 
 footer .footer-inner {
   display: flex;
-  flex-direction: column; /* stack top and copyright */
+  flex-direction: column;
   align-items: center;
   gap: 0.3rem;
 }
 
 footer .footer-top {
   display: flex;
-  flex-direction: row; /* student & class side by side */
+  flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -322,7 +321,6 @@ footer .copyright {
   color: #ccc;
   margin-top: 0.3rem;
 }
-
 
 /* Responsive */
 @media (max-width: 720px) {
@@ -345,6 +343,6 @@ footer .copyright {
 
 @media (min-width: 720px) {
   nav {
-    justify-content: center; /* center links */
+    justify-content: center;
   }
 }
