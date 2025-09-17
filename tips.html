@@ -3,14 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Travel Tips - GlobeTrek Adventures</title>
+  <title>Travel Tips - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Xx0c4o5bZVrZmkkX+pl+3V/8h/D7zI0T37jvB2xDxYyzwpR4NftR2q4u3FZyq3f9i2v6Dl1D4OXFfxh/rnY9hw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      background-color: #333;
+    }
+
+    nav .brand {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: color 0.3s;
+    }
+
+    nav .menu a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    nav .menu a:hover {
+      color: #ff6f61;
+    }
+
+    .center-heading {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .tip-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tip-card i {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 15px;
+    }
+
+    .tip-card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .tip-card p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer .footer-inner div {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <div class="container">
     <nav>
-      <div class="brand">GlobeTrek Adventures</div>
+      <div class="brand">Travel With Me</div>
       <div class="menu">
         <a href="index.html">Home</a>
         <a href="countries.html">Countries</a>
@@ -24,23 +129,43 @@
 </header>
 
 <main class="container">
-  <h1>Top 5 Travel Tips</h1>
-  <ul class="tips-list">
-    <li><strong>Pack Light:</strong> Only bring essentials to make moving around easier.</li>
-    <li><strong>Stay Safe:</strong> Keep copies of important documents and be mindful in crowded areas.</li>
-    <li><strong>Budget Wisely:</strong> Track your expenses and save for emergencies.</li>
-    <li><strong>Learn Local Phrases:</strong> Basic greetings and phrases go a long way in building rapport.</li>
-    <li><strong>Travel Off-Peak:</strong> Visit attractions early or in the off-season for fewer crowds.</li>
-  </ul>
+  <h1 class="center-heading">Top 5 Travel Tips</h1>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <i class="fas fa-suitcase-rolling"></i>
+      <h3>Pack Light</h3>
+      <p>Only bring essentials to make moving around easier.</p>
+    </div>
+    <div class="tip-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Stay Safe</h3>
+      <p>Keep copies of important documents and be mindful in crowded areas.</p>
+    </div>
+    <div class="tip-card">
+      <i class="fas fa-wallet"></i>
+      <h3>Budget Wisely</h3>
+      <p>Track your expenses and save for emergencies.</p>
+    </div>
+    <div class="tip-card">
+      <i class="fas fa-language"></i>
+      <h3>Learn Local Phrases</h3>
+      <p>Basic greetings and phrases go a long way in building rapport.</p>
+    </div>
+    <div class="tip-card">
+      <i class="fas fa-calendar-alt"></i>
+      <h3>Travel Off-Peak</h3>
+      <p>Visit attractions early or in the off-season for fewer crowds.</p>
+    </div>
+  </div>
 </main>
 
 <footer>
   <div class="container footer-inner">
-    <div>Student Name: <strong>Student Name</strong></div>
-    <div>Class: <strong>Class Info</strong></div>
-    <div class="copyright">© <span id="year"></span> GlobeTrek Adventures</div>
+    <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
+    <div>Class: <strong>CIT_4304 - IT3G</strong></div>
+    <div>© 2025 Travel With Me</div>
   </div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
