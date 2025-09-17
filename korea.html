@@ -6,9 +6,46 @@
   <title>South Korea - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
-    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .hotel span { margin-left: 0.3rem; color: gray; }
+    .read-more-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .read-more-toggle ~ .hotel-list {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .read-more-toggle:checked ~ .hotel-list {
+      display: block;
+    }
+
+    .read-more-wrapper label {
+      cursor: pointer;
+      background: #ff6f61;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .read-more-wrapper label:hover {
+      background: #e85c50;
+    }
+
+    .read-more-toggle ~ label::after {
+      content: "Read More";
+    }
+
+    .read-more-toggle:checked ~ label::after {
+      content: "Back";
+    }
   </style>
 </head>
 <body>
@@ -28,44 +65,60 @@
 </header>
 
 <main class="container">
-  <h1 class="center-heading">Top Wonders of Korea</h1>
+  <h1 class="center-heading">Top Wonders of South Korea</h1>
 
   <div class="wonders">
+
     <!-- Wonder 1 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Gyeongbokgung_Palace_%28Seoul%29.jpg" alt="Gyeongbokgung Palace">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Gyeongbokgung_Palace_at_night.jpg" alt="Gyeongbokgung Palace">
       <div class="info">
         <h4>Gyeongbokgung Palace</h4>
-        <p>Historic royal palace in Seoul, iconic for its beautiful architecture and gardens.</p>
-        <div class="hotel-list">
-          <div class="hotel">Seoul Palace Hotel - 1 km <span>⭐⭐⭐⭐ - $150/night</span></div>
-          <div class="hotel">Hanok Stay Seoul - 0.8 km <span>⭐⭐⭐ - $120/night</span></div>
+        <p>The largest of Seoul’s Five Grand Palaces, rich in history and stunning architecture.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="gyeongbok-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Seoul Palace Hotel - 0.5 km <span>⭐⭐⭐⭐ - $130/night</span></div>
+            <div class="hotel">Hanok Stay - 1 km <span>⭐⭐⭐ - $80/night</span></div>
+          </div>
+          <label for="gyeongbok-toggle"></label>
         </div>
       </div>
     </div>
 
     <!-- Wonder 2 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSeoulTower_view.jpg" alt="N Seoul Tower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/N_Seoul_Tower_from_Mt_Namsan.jpg" alt="N Seoul Tower">
       <div class="info">
         <h4>N Seoul Tower</h4>
-        <p>A famous observation tower offering panoramic views of Seoul and surrounding mountains.</p>
-        <div class="hotel-list">
-          <div class="hotel">Tower View Hotel - 0.5 km <span>⭐⭐⭐⭐ - $130/night</span></div>
-          <div class="hotel">Myeongdong Inn - 1 km <span>⭐⭐⭐ - $100/night</span></div>
+        <p>A famous observation tower atop Namsan Mountain offering panoramic city views.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="nseoul-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Namsan Hotel - 0.3 km <span>⭐⭐⭐⭐ - $120/night</span></div>
+            <div class="hotel">Seoul Sky Lodge - 1 km <span>⭐⭐⭐ - $100/night</span></div>
+          </div>
+          <label for="nseoul-toggle"></label>
         </div>
       </div>
     </div>
 
     <!-- Wonder 3 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bulguksa_Temple_Seokguram_Grotto.jpg" alt="Bulguksa Temple">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Jeju_Island_Seongsan_Sunrise_Peak.jpg" alt="Seongsan Ilchulbong">
       <div class="info">
-        <h4>Bulguksa Temple</h4>
-        <p>UNESCO World Heritage site in Gyeongju, representing Korea's rich Buddhist culture.</p>
-        <div class="hotel-list">
-          <div class="hotel">Gyeongju Hanok Stay - 0.7 km <span>⭐⭐⭐ - $110/night</span></div>
-          <div class="hotel">Temple View Hotel - 1 km <span>⭐⭐⭐ - $95/night</span></div>
+        <h4>Seongsan Ilchulbong</h4>
+        <p>A UNESCO World Heritage site on Jeju Island known for its dramatic sunrise views.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="seongsan-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Jeju Sunrise Hotel - 0.5 km <span>⭐⭐⭐ - $90/night</span></div>
+            <div class="hotel">Seongsan Guesthouse - 1 km <span>⭐⭐⭐ - $70/night</span></div>
+          </div>
+          <label for="seongsan-toggle"></label>
         </div>
       </div>
     </div>
@@ -79,12 +132,9 @@
       <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
       <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
     </div>
-    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+    <div class="copyright">© 2025 Travel With Me</div>
   </div>
 </footer>
-
-<!-- For Year -->
-  <div class="copyright">© 2025 Travel With Me</div>
 
 </body>
 </html>
