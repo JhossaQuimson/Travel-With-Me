@@ -36,7 +36,7 @@ nav .brand {
 nav .menu {
   display: flex;
   gap: 1rem;
-  margin-left: auto; /* pushes links to the right */
+  margin-left: auto; /* push links to the right */
 }
 
 nav .menu a {
@@ -53,7 +53,6 @@ nav .menu a.active {
   text-decoration: underline;
 }
 
-
 /* Hero Section */
 .hero {
   flex: 1; /* allow hero to grow and push footer down */
@@ -68,7 +67,7 @@ nav .menu a.active {
 }
 
 .hero-inner {
-  max-width: 700px;          /* limits width for readability */
+  max-width: 700px;
 }
 
 .hero-inner h1 {
@@ -257,6 +256,7 @@ nav .menu a.active {
   flex-direction: column;
   gap: 0.8rem;
   max-width: 500px;
+  margin: auto;
 }
 
 .contact-form input,
@@ -303,7 +303,7 @@ footer .copyright {
 /* Responsive */
 @media (min-width: 720px) {
   nav {
-    justify-content: flex-start; /* brand + menu left-aligned */
+    justify-content: flex-start; /* brand + menu left-aligned by default */
   }
 
   nav .brand {
