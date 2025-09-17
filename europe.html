@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Europe - Travel With Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
+    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .hotel span { margin-left: 0.3rem; color: gray; }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">Travel With Me</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="countries.html" class="active">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1 class="center-heading">Top Wonders of Europe (Berlin)</h1>
+
+  <div class="wonders">
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Brandenburg_Gate_Berlin.jpg" alt="Brandenburg Gate">
+      <div class="info">
+        <h4>Brandenburg Gate</h4>
+        <p>Historic 18th-century gate in Berlin, symbolizing peace and unity in Germany.</p>
+        <div class="hotel-list">
+          <div class="hotel">Hotel Adlon - 0.5 km <span>⭐⭐⭐⭐⭐ - $300/night</span></div>
+          <div class="hotel">Berlin Central Inn - 0.3 km <span>⭐⭐⭐⭐ - $180/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Berlin_Cathedral_Berlin.jpg" alt="Berlin Cathedral">
+      <div class="info">
+        <h4>Berlin Cathedral</h4>
+        <p>Majestic Protestant cathedral with impressive dome and intricate interior designs.</p>
+        <div class="hotel-list">
+          <div class="hotel">Dom Hotel Berlin - 0.4 km <span>⭐⭐⭐⭐ - $200/night</span></div>
+          <div class="hotel">Museum Island Inn - 0.5 km <span>⭐⭐⭐ - $130/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Checkpoint_Charlie_Museum_Berlin.jpg" alt="Checkpoint Charlie">
+      <div class="info">
+        <h4>Checkpoint Charlie</h4>
+        <p>Former Berlin Wall crossing point, now a museum documenting Cold War history.</p>
+        <div class="hotel-list">
+          <div class="hotel">Mitte Hostel - 0.2 km <span>⭐⭐⭐ - $90/night</span></div>
+          <div class="hotel">Charlottenburg Hotel - 0.5 km <span>⭐⭐⭐⭐ - $160/night</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
+      <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
