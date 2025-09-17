@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>France - Travel With Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
+    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .hotel span { margin-left: 0.3rem; color: gray; }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">Travel With Me</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="countries.html" class="active">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1 class="center-heading">Top Wonders of France</h1>
+
+  <div class="wonders">
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower">
+      <div class="info">
+        <h4>Eiffel Tower</h4>
+        <p>Iconic iron tower in Paris offering panoramic city views and romantic ambiance.</p>
+        <div class="hotel-list">
+          <div class="hotel">Hotel Eiffel Seine - 0.3 km <span>⭐⭐⭐⭐ - $200/night</span></div>
+          <div class="hotel">Pullman Paris Tour Eiffel - 0.5 km <span>⭐⭐⭐⭐⭐ - $350/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Louvre_Museum_Wikimedia_Commons.jpg" alt="Louvre Museum">
+      <div class="info">
+        <h4>Louvre Museum</h4>
+        <p>World-famous museum in Paris housing masterpieces like the Mona Lisa and Venus de Milo.</p>
+        <div class="hotel-list">
+          <div class="hotel">Le Meurice - 0.6 km <span>⭐⭐⭐⭐⭐ - $400/night</span></div>
+          <div class="hotel">Hotel du Louvre - 0.2 km <span>⭐⭐⭐⭐ - $250/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Notre_Dame_Cathedral_Wikimedia_Commons.jpg" alt="Notre Dame">
+      <div class="info">
+        <h4>Notre Dame Cathedral</h4>
+        <p>Historic gothic cathedral in Paris, known for its intricate architecture and stained glass windows.</p>
+        <div class="hotel-list">
+          <div class="hotel">Hotel Notre Dame - 0.3 km <span>⭐⭐⭐⭐ - $220/night</span></div>
+          <div class="hotel">Hotel Saint Jacques - 0.5 km <span>⭐⭐⭐ - $150/night</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
+      <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
