@@ -61,9 +61,14 @@ nav .menu a.active {
   background-position: center;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
+  text-align: center;        /* center text inside hero-inner */
   padding: 4rem 2rem;
-  text-align: left;
+}
+
+.hero-inner {
+  max-width: 700px;          /* limits width for readability */
 }
 
 .hero-inner h1 {
