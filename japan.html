@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Japan - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Read More Toggle Wrapper */
+    .read-more-wrapper {
+      display: flex;
+      flex-direction: column; /* normal order */
+      align-items: center;    /* center button */
+      margin-top: 0.5rem;
+    }
+
+    /* Initially hide hotel info */
+    .read-more-wrapper .hotel-list {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.5rem; /* space between hotels and button */
+    }
+
+    /* When checkbox is checked, show hotels above button */
+    .read-more-toggle:checked + .hotel-list {
+      display: block;
+    }
+
+    /* Center the Read More button */
+    .read-more-wrapper .more-info {
+      cursor: pointer;
+      background: #ff6f61;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .read-more-wrapper .more-info:hover {
+      background: #e85c50;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,56 +64,56 @@
 
   <div class="wonders">
 
-    <!-- Wonder 1 -->
+    <!-- Wonder 1: Mount Fuji -->
     <div class="wonder-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Mount_Fuji_from_Hakone_1.jpg" alt="Mount Fuji">
       <div class="info">
         <h4>Mount Fuji</h4>
         <p>Japan's iconic mountain and highest peak, popular for climbing and photography.</p>
-
-        <!-- Read More -->
-        <input type="checkbox" id="fuji-toggle" class="read-more-toggle">
-        <label for="fuji-toggle" class="more-info">Read More</label>
-
-        <div class="hotel-list">
-          <div class="hotel">Hotel Green Plaza - 3 km <span>⭐⭐⭐ - $120/night</span></div>
-          <div class="hotel">Fuji View Lodge - 5 km <span>⭐⭐⭐⭐ - $150/night</span></div>
+        
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="fuji-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Hotel Green Plaza - 3 km <span>⭐⭐⭐ - $120/night</span></div>
+            <div class="hotel">Fuji View Lodge - 5 km <span>⭐⭐⭐⭐ - $150/night</span></div>
+          </div>
+          <label for="fuji-toggle" class="more-info">Read More</label>
         </div>
       </div>
     </div>
 
-    <!-- Wonder 2 -->
+    <!-- Wonder 2: Kinkaku-ji -->
     <div class="wonder-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Kinkaku-ji_in_Japan.jpg" alt="Kinkaku-ji">
       <div class="info">
         <h4>Kinkaku-ji</h4>
         <p>The Golden Pavilion in Kyoto, a stunning Zen Buddhist temple surrounded by gardens.</p>
-
-        <!-- Read More -->
-        <input type="checkbox" id="kinkaku-toggle" class="read-more-toggle">
-        <label for="kinkaku-toggle" class="more-info">Read More</label>
-
-        <div class="hotel-list">
-          <div class="hotel">Kyoto Royal Hotel - 1 km <span>⭐⭐⭐⭐ - $180/night</span></div>
-          <div class="hotel">Garden Inn Kyoto - 2 km <span>⭐⭐⭐ - $110/night</span></div>
+        
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="kinkaku-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Kyoto Royal Hotel - 1 km <span>⭐⭐⭐⭐ - $180/night</span></div>
+            <div class="hotel">Garden Inn Kyoto - 2 km <span>⭐⭐⭐ - $110/night</span></div>
+          </div>
+          <label for="kinkaku-toggle" class="more-info">Read More</label>
         </div>
       </div>
     </div>
 
-    <!-- Wonder 3 -->
+    <!-- Wonder 3: Fushimi Inari Shrine -->
     <div class="wonder-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Fushimi_Inari-taisha_2017.jpg" alt="Fushimi Inari Shrine">
       <div class="info">
         <h4>Fushimi Inari Shrine</h4>
         <p>Famous for its thousands of red torii gates winding up the mountain in Kyoto.</p>
-
-        <!-- Read More -->
-        <input type="checkbox" id="inari-toggle" class="read-more-toggle">
-        <label for="inari-toggle" class="more-info">Read More</label>
-
-        <div class="hotel-list">
-          <div class="hotel">Inari Stay - 0.5 km <span>⭐⭐⭐ - $90/night</span></div>
-          <div class="hotel">Kyoto Guesthouse - 1 km <span>⭐⭐⭐ - $70/night</span></div>
+        
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="inari-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Inari Stay - 0.5 km <span>⭐⭐⭐ - $90/night</span></div>
+            <div class="hotel">Kyoto Guesthouse - 1 km <span>⭐⭐⭐ - $70/night</span></div>
+          </div>
+          <label for="inari-toggle" class="more-info">Read More</label>
         </div>
       </div>
     </div>
