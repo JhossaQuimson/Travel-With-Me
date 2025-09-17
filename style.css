@@ -288,16 +288,18 @@ nav .menu a.active {
 }
 
 /* Footer */
+/* Footer */
 footer {
   background: #333;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
   width: 100%;
-  position: fixed; /* fixed at bottom */
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
+  position: relative; /* remove fixed */
+  bottom: auto;       /* reset bottom */
+  left: auto;         /* reset left */
+  z-index: auto;      /* reset z-index */
+  margin-top: auto;   /* push footer to bottom if content is short */
 }
 
 footer .footer-inner {
@@ -320,6 +322,7 @@ footer .copyright {
   color: #ccc;
   margin-top: 0.3rem;
 }
+
 
 /* Responsive */
 @media (max-width: 720px) {
