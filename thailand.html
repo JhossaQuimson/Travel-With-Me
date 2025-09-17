@@ -6,12 +6,50 @@
   <title>Thailand - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
-    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .hotel span { margin-left: 0.3rem; color: gray; }
+    .read-more-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .read-more-toggle ~ .hotel-list {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .read-more-toggle:checked ~ .hotel-list {
+      display: block;
+    }
+
+    .read-more-wrapper label {
+      cursor: pointer;
+      background: #ff6f61;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .read-more-wrapper label:hover {
+      background: #e85c50;
+    }
+
+    .read-more-toggle ~ label::after {
+      content: "Read More";
+    }
+
+    .read-more-toggle:checked ~ label::after {
+      content: "Back";
+    }
   </style>
 </head>
 <body>
+
 <header>
   <nav>
     <div class="brand">Travel With Me</div>
@@ -30,41 +68,61 @@
   <h1 class="center-heading">Top Wonders of Thailand</h1>
 
   <div class="wonders">
+
+    <!-- Wonder 1 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Grand_Palace_Bangkok_01.jpg" alt="Grand Palace">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Grand_Palace_Bangkok.jpg" alt="Grand Palace">
       <div class="info">
-        <h4>Grand Palace</h4>
-        <p>Historic royal palace in Bangkok, famous for ornate architecture and the Emerald Buddha.</p>
-        <div class="hotel-list">
-          <div class="hotel">Riva Surya Hotel - 0.5 km <span>⭐⭐⭐⭐ - $140/night</span></div>
-          <div class="hotel">Mandarin Bangkok - 1 km <span>⭐⭐⭐⭐ - $160/night</span></div>
+        <h4>Grand Palace, Bangkok</h4>
+        <p>The historic royal palace featuring stunning Thai architecture and temples.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="grandpalace-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">The Siam Hotel - 0.8 km <span>⭐⭐⭐⭐⭐ - $250/night</span></div>
+            <div class="hotel">Riva Surya Hotel - 1 km <span>⭐⭐⭐⭐ - $120/night</span></div>
+          </div>
+          <label for="grandpalace-toggle"></label>
         </div>
       </div>
     </div>
 
+    <!-- Wonder 2 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Phang_Nga_Bay_-_Thailand_-_Panorama.jpg" alt="Phang Nga Bay">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg" alt="Wat Phra That Doi Suthep">
+      <div class="info">
+        <h4>Wat Phra That Doi Suthep</h4>
+        <p>Iconic Buddhist temple atop a mountain, offering panoramic views of Chiang Mai.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="doi-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Doi Suthep Lodge - 0.5 km <span>⭐⭐⭐⭐ - $140/night</span></div>
+            <div class="hotel">Chiang Mai Mountain Inn - 1 km <span>⭐⭐⭐ - $90/night</span></div>
+          </div>
+          <label for="doi-toggle"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wonder 3 -->
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Phang-Nga_Bay_-_Thailand.jpg" alt="Phang Nga Bay">
       <div class="info">
         <h4>Phang Nga Bay</h4>
-        <p>Famous for stunning limestone cliffs, emerald waters, and kayaking experiences.</p>
-        <div class="hotel-list">
-          <div class="hotel">Bayview Resort - 1 km <span>⭐⭐⭐ - $120/night</span></div>
-          <div class="hotel">Cliffside Inn - 1.5 km <span>⭐⭐⭐ - $100/night</span></div>
+        <p>Famous bay with limestone cliffs and emerald waters, perfect for boat tours and kayaking.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="phang-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Phang Nga Bay Resort - 0.5 km <span>⭐⭐⭐⭐ - $150/night</span></div>
+            <div class="hotel">Sea Cliff Hotel - 1 km <span>⭐⭐⭐ - $100/night</span></div>
+          </div>
+          <label for="phang-toggle"></label>
         </div>
       </div>
     </div>
 
-    <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Wat_Arun_Ratchawararam.jpg" alt="Wat Arun">
-      <div class="info">
-        <h4>Wat Arun</h4>
-        <p>Iconic riverside temple in Bangkok, known for its tall spires decorated with colorful porcelain.</p>
-        <div class="hotel-list">
-          <div class="hotel">Riverside Hotel - 0.7 km <span>⭐⭐⭐⭐ - $150/night</span></div>
-          <div class="hotel">Temple View Inn - 0.5 km <span>⭐⭐⭐ - $110/night</span></div>
-        </div>
-      </div>
-    </div>
   </div>
 </main>
 
@@ -74,12 +132,9 @@
       <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
       <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
     </div>
-    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+    <div class="copyright">© 2025 Travel With Me</div>
   </div>
 </footer>
 
-<!-- For Year -->
-  <div class="copyright">© 2025 Travel With Me</div>
-  
 </body>
 </html>
