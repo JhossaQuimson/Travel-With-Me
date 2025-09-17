@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thailand - Travel With Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
+    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .hotel span { margin-left: 0.3rem; color: gray; }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">Travel With Me</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="countries.html" class="active">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1 class="center-heading">Top Wonders of Thailand</h1>
+
+  <div class="wonders">
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Grand_Palace_Bangkok_01.jpg" alt="Grand Palace">
+      <div class="info">
+        <h4>Grand Palace</h4>
+        <p>Historic royal palace in Bangkok, famous for ornate architecture and the Emerald Buddha.</p>
+        <div class="hotel-list">
+          <div class="hotel">Riva Surya Hotel - 0.5 km <span>⭐⭐⭐⭐ - $140/night</span></div>
+          <div class="hotel">Mandarin Bangkok - 1 km <span>⭐⭐⭐⭐ - $160/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Phang_Nga_Bay_-_Thailand_-_Panorama.jpg" alt="Phang Nga Bay">
+      <div class="info">
+        <h4>Phang Nga Bay</h4>
+        <p>Famous for stunning limestone cliffs, emerald waters, and kayaking experiences.</p>
+        <div class="hotel-list">
+          <div class="hotel">Bayview Resort - 1 km <span>⭐⭐⭐ - $120/night</span></div>
+          <div class="hotel">Cliffside Inn - 1.5 km <span>⭐⭐⭐ - $100/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Wat_Arun_Ratchawararam.jpg" alt="Wat Arun">
+      <div class="info">
+        <h4>Wat Arun</h4>
+        <p>Iconic riverside temple in Bangkok, known for its tall spires decorated with colorful porcelain.</p>
+        <div class="hotel-list">
+          <div class="hotel">Riverside Hotel - 0.7 km <span>⭐⭐⭐⭐ - $150/night</span></div>
+          <div class="hotel">Temple View Inn - 0.5 km <span>⭐⭐⭐ - $110/night</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
+      <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
