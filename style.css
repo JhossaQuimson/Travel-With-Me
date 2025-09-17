@@ -11,7 +11,6 @@ html, body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #fdf6e3, #f1f8ff);
-  padding-bottom: 80px; /* space for footer */
   color: #333;
   line-height: 1.6;
 }
