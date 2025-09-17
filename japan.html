@@ -5,23 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Japan - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Only page-specific styles for hotel display */
-    .hotel-list {
-      margin-top: 0.5rem;
-      padding-left: 1rem;
-    }
-
-    .hotel {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-
-    .hotel span {
-      margin-left: 0.3rem;
-      color: gray;
-    }
-  </style>
 </head>
 <body>
 
@@ -43,12 +26,18 @@
   <h1 class="center-heading">Top Wonders of Japan</h1>
 
   <div class="wonders">
+
     <!-- Wonder 1 -->
     <div class="wonder-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Mount_Fuji_from_Hakone_1.jpg" alt="Mount Fuji">
       <div class="info">
         <h4>Mount Fuji</h4>
         <p>Japan's iconic mountain and highest peak, popular for climbing and photography.</p>
+
+        <!-- Read More -->
+        <input type="checkbox" id="fuji-toggle" class="read-more-toggle">
+        <label for="fuji-toggle" class="more-info">Read More</label>
+
         <div class="hotel-list">
           <div class="hotel">Hotel Green Plaza - 3 km <span>⭐⭐⭐ - $120/night</span></div>
           <div class="hotel">Fuji View Lodge - 5 km <span>⭐⭐⭐⭐ - $150/night</span></div>
@@ -62,6 +51,11 @@
       <div class="info">
         <h4>Kinkaku-ji</h4>
         <p>The Golden Pavilion in Kyoto, a stunning Zen Buddhist temple surrounded by gardens.</p>
+
+        <!-- Read More -->
+        <input type="checkbox" id="kinkaku-toggle" class="read-more-toggle">
+        <label for="kinkaku-toggle" class="more-info">Read More</label>
+
         <div class="hotel-list">
           <div class="hotel">Kyoto Royal Hotel - 1 km <span>⭐⭐⭐⭐ - $180/night</span></div>
           <div class="hotel">Garden Inn Kyoto - 2 km <span>⭐⭐⭐ - $110/night</span></div>
@@ -75,12 +69,18 @@
       <div class="info">
         <h4>Fushimi Inari Shrine</h4>
         <p>Famous for its thousands of red torii gates winding up the mountain in Kyoto.</p>
+
+        <!-- Read More -->
+        <input type="checkbox" id="inari-toggle" class="read-more-toggle">
+        <label for="inari-toggle" class="more-info">Read More</label>
+
         <div class="hotel-list">
           <div class="hotel">Inari Stay - 0.5 km <span>⭐⭐⭐ - $90/night</span></div>
           <div class="hotel">Kyoto Guesthouse - 1 km <span>⭐⭐⭐ - $70/night</span></div>
         </div>
       </div>
     </div>
+
   </div>
 </main>
 
@@ -90,12 +90,9 @@
       <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
       <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
     </div>
-    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+    <div class="copyright">© 2025 Travel With Me</div>
   </div>
 </footer>
-
-<!-- For Year -->
-  <div class="copyright">© 2025 Travel With Me</div>
 
 </body>
 </html>
