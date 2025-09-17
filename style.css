@@ -295,16 +295,25 @@ footer {
   width: 100%;
 }
 
-
 footer .footer-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack top and copyright */
+  align-items: center;
   gap: 0.3rem;
+}
+
+footer .footer-top {
+  display: flex;
+  flex-direction: row;       /* side by side */
+  gap: 2rem;                /* spacing between items */
+  flex-wrap: wrap;           /* wrap on small screens */
+  justify-content: center;
 }
 
 footer .copyright {
   font-size: 0.9rem;
   color: #ccc;
+  margin-top: 0.3rem;
 }
 
 /* Responsive */
