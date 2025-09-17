@@ -373,3 +373,46 @@ footer .copyright {
     justify-content: center;
   }
 }
+
+/* Read More / Hotel display */
+.read-more-toggle {
+  display: none;
+}
+
+.more-info {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #ff6f61;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.more-info:hover {
+  background: #e85c50;
+}
+
+.hotel-list {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.hotel {
+  margin-bottom: 0.5rem;
+}
+
+.hotel span {
+  margin-left: 0.3rem;
+  color: gray;
+}
+
+/* Show hotel list when checkbox is checked */
+.read-more-toggle:checked + .more-info + .hotel-list {
+  display: block;
+}
+
