@@ -8,40 +8,50 @@
   <style>
     /* Read More Toggle Wrapper */
     .read-more-wrapper {
-      display: flex;
-      flex-direction: column; /* normal order */
-      align-items: center;    /* center button */
-      margin-top: 0.5rem;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
 
-    /* Initially hide hotel info */
-    .read-more-wrapper .hotel-list {
-      display: none;
-      width: 100%;
-      margin-bottom: 0.5rem; /* space between hotels and button */
-    }
+/* Hide the hotel list initially */
+.read-more-toggle ~ .hotel-list {
+  display: none;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
 
-    /* When checkbox is checked, show hotels above button */
-    .read-more-toggle:checked + .hotel-list {
-      display: block;
-    }
+/* Show the hotel list when checked */
+.read-more-toggle:checked ~ .hotel-list {
+  display: block;
+}
 
-    /* Center the Read More button */
-    .read-more-wrapper .more-info {
-      cursor: pointer;
-      background: #ff6f61;
-      color: white;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      display: inline-block;
-      transition: background 0.3s;
-    }
+/* Style the label as a button */
+.read-more-wrapper label {
+  cursor: pointer;
+  background: #ff6f61;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: inline-block;
+  transition: background 0.3s;
+}
 
-    .read-more-wrapper .more-info:hover {
-      background: #e85c50;
-    }
-  </style>
+/* Hover effect */
+.read-more-wrapper label:hover {
+  background: #e85c50;
+}
+
+/* Change label text using pseudo-elements */
+.read-more-toggle ~ label::after {
+  content: "Read More";
+}
+
+.read-more-toggle:checked ~ label::after {
+  content: "Back";
+}
+
 </head>
 <body>
 
