@@ -10,7 +10,8 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #fdf6e3, #f1f8ff);
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
   line-height: 1.6;
 }
@@ -114,12 +115,22 @@ nav .menu a.active {
   margin-bottom: 1.5rem;
 }
 
+/* Featured Countries Heading */
+.center-heading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
 /* Countries Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .card {
@@ -133,18 +144,25 @@ nav .menu a.active {
   align-items: center;     /* horizontal center */
   padding: 1rem;
   height: 250px;           /* uniform height */
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .card img {
   max-width: 100%;
   max-height: 150px;
-  object-fit: contain; /* keep aspect ratio */
+  object-fit: cover; /* maintain aspect ratio */
+  border-radius: 10px;
   margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .card h3 a {
