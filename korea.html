@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>South Korea - Travel With Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
+    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .hotel span { margin-left: 0.3rem; color: gray; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Travel With Me</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="countries.html" class="active">Countries</a>
+      <a href="blog.html">Blog</a>
+      <a href="tips.html">Travel Tips</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <h1 class="center-heading">Top Wonders of Korea</h1>
+
+  <div class="wonders">
+    <!-- Wonder 1 -->
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Gyeongbokgung_Palace_%28Seoul%29.jpg" alt="Gyeongbokgung Palace">
+      <div class="info">
+        <h4>Gyeongbokgung Palace</h4>
+        <p>Historic royal palace in Seoul, iconic for its beautiful architecture and gardens.</p>
+        <div class="hotel-list">
+          <div class="hotel">Seoul Palace Hotel - 1 km <span>⭐⭐⭐⭐ - $150/night</span></div>
+          <div class="hotel">Hanok Stay Seoul - 0.8 km <span>⭐⭐⭐ - $120/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wonder 2 -->
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSeoulTower_view.jpg" alt="N Seoul Tower">
+      <div class="info">
+        <h4>N Seoul Tower</h4>
+        <p>A famous observation tower offering panoramic views of Seoul and surrounding mountains.</p>
+        <div class="hotel-list">
+          <div class="hotel">Tower View Hotel - 0.5 km <span>⭐⭐⭐⭐ - $130/night</span></div>
+          <div class="hotel">Myeongdong Inn - 1 km <span>⭐⭐⭐ - $100/night</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wonder 3 -->
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Bulguksa_Temple_Seokguram_Grotto.jpg" alt="Bulguksa Temple">
+      <div class="info">
+        <h4>Bulguksa Temple</h4>
+        <p>UNESCO World Heritage site in Gyeongju, representing Korea's rich Buddhist culture.</p>
+        <div class="hotel-list">
+          <div class="hotel">Gyeongju Hanok Stay - 0.7 km <span>⭐⭐⭐ - $110/night</span></div>
+          <div class="hotel">Temple View Hotel - 1 km <span>⭐⭐⭐ - $95/night</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
+      <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
