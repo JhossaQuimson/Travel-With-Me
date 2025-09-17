@@ -16,27 +16,31 @@ html, body {
 }
 
 /* Header & Navigation */
+/* Header & Navigation */
 header {
   background: linear-gradient(90deg, #ff6f61, #ffcc70);
   color: white;
+  position: relative;
 }
 
 nav {
   display: flex;
   align-items: center;
+  justify-content: center; /* center the menu links */
   padding: 1rem 2rem;
-  gap: 2rem;
+  position: relative;
 }
 
 nav .brand {
   font-weight: bold;
   font-size: 1.4rem;
+  position: absolute; /* keep brand on the left */
+  left: 2rem;
 }
 
 nav .menu {
   display: flex;
   gap: 1rem;
-  margin-left: auto; /* push links to the right */
 }
 
 nav .menu a {
