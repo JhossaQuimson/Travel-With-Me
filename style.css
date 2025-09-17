@@ -11,6 +11,7 @@ html, body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #fdf6e3, #f1f8ff);
+  padding-bottom: 80px; /* space for footer */
   color: #333;
   line-height: 1.6;
 }
@@ -287,17 +288,19 @@ nav .menu a.active {
 }
 
 /* Footer fixed at the bottom */
+/* Footer */
 footer {
-  position: fixed;      /* fixed at the bottom */
-  bottom: 0;            /* bottom of the viewport */
-  left: 0;              /* start from left edge */
-  width: 100%;          /* full width */
   background: #333;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
-  z-index: 100;         /* ensure it stays above other content */
+  position: fixed;   /* fixed at bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
 
 footer .footer-inner {
   display: flex;
