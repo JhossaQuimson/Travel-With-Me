@@ -6,12 +6,50 @@
   <title>Europe - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
-    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .hotel span { margin-left: 0.3rem; color: gray; }
+    .read-more-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .read-more-toggle ~ .hotel-list {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .read-more-toggle:checked ~ .hotel-list {
+      display: block;
+    }
+
+    .read-more-wrapper label {
+      cursor: pointer;
+      background: #ff6f61;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .read-more-wrapper label:hover {
+      background: #e85c50;
+    }
+
+    .read-more-toggle ~ label::after {
+      content: "Read More";
+    }
+
+    .read-more-toggle:checked ~ label::after {
+      content: "Back";
+    }
   </style>
 </head>
 <body>
+
 <header>
   <nav>
     <div class="brand">Travel With Me</div>
@@ -27,44 +65,64 @@
 </header>
 
 <main class="container">
-  <h1 class="center-heading">Top Wonders of Europe (Berlin)</h1>
+  <h1 class="center-heading">Top Wonders of Europe</h1>
 
   <div class="wonders">
+
+    <!-- Wonder 1 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Brandenburg_Gate_Berlin.jpg" alt="Brandenburg Gate">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Colosseum">
       <div class="info">
-        <h4>Brandenburg Gate</h4>
-        <p>Historic 18th-century gate in Berlin, symbolizing peace and unity in Germany.</p>
-        <div class="hotel-list">
-          <div class="hotel">Hotel Adlon - 0.5 km <span>⭐⭐⭐⭐⭐ - $300/night</span></div>
-          <div class="hotel">Berlin Central Inn - 0.3 km <span>⭐⭐⭐⭐ - $180/night</span></div>
+        <h4>Colosseum</h4>
+        <p>Ancient Roman amphitheater in Rome, Italy, renowned for its massive structure and history.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="colosseum-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Colosseo Inn - 0.4 km <span>⭐⭐⭐ - $130/night</span></div>
+            <div class="hotel">Hotel Forum - 0.6 km <span>⭐⭐⭐⭐ - $210/night</span></div>
+          </div>
+          <label for="colosseum-toggle"></label>
         </div>
       </div>
     </div>
 
+    <!-- Wonder 2 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Berlin_Cathedral_Berlin.jpg" alt="Berlin Cathedral">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Sagrada_Familia_01.jpg" alt="Sagrada Familia">
       <div class="info">
-        <h4>Berlin Cathedral</h4>
-        <p>Majestic Protestant cathedral with impressive dome and intricate interior designs.</p>
-        <div class="hotel-list">
-          <div class="hotel">Dom Hotel Berlin - 0.4 km <span>⭐⭐⭐⭐ - $200/night</span></div>
-          <div class="hotel">Museum Island Inn - 0.5 km <span>⭐⭐⭐ - $130/night</span></div>
+        <h4>Sagrada Familia</h4>
+        <p>Gaudi's unfinished masterpiece in Barcelona, famous for its intricate architecture.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="sagrada-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Hotel Barcelona Catedral - 0.5 km <span>⭐⭐⭐⭐ - $190/night</span></div>
+            <div class="hotel">Casa Fuster - 0.7 km <span>⭐⭐⭐⭐⭐ - $320/night</span></div>
+          </div>
+          <label for="sagrada-toggle"></label>
         </div>
       </div>
     </div>
 
+    <!-- Wonder 3 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Checkpoint_Charlie_Museum_Berlin.jpg" alt="Checkpoint Charlie">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Neuschwanstein_Castle_LOC_print.jpg" alt="Neuschwanstein Castle">
       <div class="info">
-        <h4>Checkpoint Charlie</h4>
-        <p>Former Berlin Wall crossing point, now a museum documenting Cold War history.</p>
-        <div class="hotel-list">
-          <div class="hotel">Mitte Hostel - 0.2 km <span>⭐⭐⭐ - $90/night</span></div>
-          <div class="hotel">Charlottenburg Hotel - 0.5 km <span>⭐⭐⭐⭐ - $160/night</span></div>
+        <h4>Neuschwanstein Castle</h4>
+        <p>Fairytale castle in Bavaria, Germany, known for its picturesque towers and mountain views.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="neuschwanstein-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Hotel Müller - 0.3 km <span>⭐⭐⭐ - $120/night</span></div>
+            <div class="hotel">Schloss Hotel Hohenschwangau - 0.5 km <span>⭐⭐⭐⭐ - $220/night</span></div>
+          </div>
+          <label for="neuschwanstein-toggle"></label>
         </div>
       </div>
     </div>
+
   </div>
 </main>
 
@@ -74,12 +132,9 @@
       <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
       <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
     </div>
-    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+    <div class="copyright">© 2025 Travel With Me</div>
   </div>
 </footer>
 
-<!-- For Year -->
-  <div class="copyright">© 2025 Travel With Me</div>
-  
 </body>
 </html>
