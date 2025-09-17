@@ -59,18 +59,20 @@ nav .menu a.active {
 
 /* Hero Section */
 .hero {
+  .hero {
   flex: 1; /* fills remaining space */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: center;    /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  text-align: center;     /* center text inside hero-inner */
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
   background-size: cover;
   background-position: center;
   padding: 2rem;
-  color: white; /* ensures text is white */
-  min-height: calc(100vh - 80px); /* adjusts hero height to fill space above footer/header */
+  color: white;           /* hero text white */
+  min-height: calc(100vh - 60px); /* ensures hero fills most of viewport, adjust 60px if header height changes */
+}
 }
 
 .hero-inner {
