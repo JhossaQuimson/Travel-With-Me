@@ -10,8 +10,8 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      color: #333;
       background: #f9f9f9;
+      color: #333;
     }
     a {
       text-decoration: none;
@@ -65,92 +65,57 @@
       font-size: 1.2rem;
     }
 
-    /* Contact Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    /* Contact Section */
+    .contact-section {
+      display: flex;
       gap: 2rem;
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
     @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
+      .contact-section {
+        flex-direction: column;
       }
     }
 
-    /* Cards */
-    .card {
+    /* Contact Info Card */
+    .contact-card {
+      flex: 1;
       background: #fff;
       border-radius: 15px;
       padding: 2rem;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
-    .card h2 {
+    .contact-card h2 {
       color: #ff6f61;
       font-size: 1.7rem;
       margin-bottom: 1rem;
     }
-    .card p {
+    .contact-card p {
       color: #555;
       line-height: 1.8;
     }
-    .card ul {
+    .contact-card ul {
       list-style: none;
       padding-left: 0;
       margin-top: 1rem;
     }
-    .card ul li {
+    .contact-card ul li {
       margin-bottom: 0.5rem;
     }
 
-    /* Contact Form */
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.8rem 1rem;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 1rem;
-      width: 100%;
-      transition: border-color 0.3s;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #ff6f61;
-    }
-    .contact-form button {
-      background: #ff6f61;
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
-      max-width: 200px;
-      align-self: center;
-    }
-    .contact-form button:hover {
-      background: #e65b50;
-    }
-
-    /* Map */
-    .map-container iframe {
-      width: 100%;
-      height: 250px;
+    /* Map Card */
+    .map-card {
+      flex: 1;
       border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
       border: none;
     }
 
@@ -188,16 +153,16 @@
     <section class="hero">
       <div class="hero-inner">
         <h1>Contact Us</h1>
-        <p class="lead">We’re here to help you plan your next adventure. Send us a message or visit our office!</p>
+        <p class="lead">We’re here to help you plan your next adventure. Reach out to us or visit our office!</p>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="grid">
-      <!-- Contact Info Card -->
-      <div class="card">
+    <section class="contact-section">
+      <!-- Contact Info -->
+      <div class="contact-card">
         <h2>Get in Touch</h2>
-        <p>We’re always ready to assist you. Reach us via email, phone, or visit us in person:</p>
+        <p>We’re always ready to assist you. Reach us via email, phone, or visit our office:</p>
         <ul>
           <li><strong>Email:</strong> <a href="mailto:info@travelwithme.com">info@travelwithme.com</a></li>
           <li><strong>Phone:</strong> +63 900 123 4567</li>
@@ -205,22 +170,11 @@
         </ul>
       </div>
 
-      <!-- Contact Form Card -->
-      <div class="card">
-        <h2>Send a Message</h2>
-        <p>Fill out the form below and we’ll respond promptly:</p>
-        <form class="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required>
-          <input type="email" id="email" placeholder="Your Email" required>
-          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-
-      <!-- Map Card -->
-      <div class="card map-container">
-        <h2>Our Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.921258483859!2d120.982022!3d14.599512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c87c6f8f8a9d%3A0x505b1a1d3e7c3e!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1694942570000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+      <!-- Map -->
+      <div class="map-card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.921258483859!2d120.982022!3d14.599512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c87c6f8f8a9d%3A0x505b1a1d3e7c3e!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1694942570000!5m2!1sen!2sus" 
+          allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
