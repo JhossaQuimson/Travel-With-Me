@@ -59,7 +59,7 @@ nav .menu a.active {
 
 /* Hero Section */
 .hero {
-  flex: 1;
+  flex: 1; /* take remaining vertical space */
   display: flex;
   align-items: center;       /* vertical centering */
   justify-content: center;   /* horizontal centering */
@@ -68,8 +68,9 @@ nav .menu a.active {
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
   background-size: cover;
   background-position: center;
-  padding: 4rem 2rem 6rem 2rem; /* extra bottom padding for footer */
+  padding: 2rem;
   color: white;
+  min-height: calc(100vh - 60px - 60px); /* fill viewport minus header/footer */
 }
 
 .hero-inner {
