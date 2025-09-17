@@ -6,12 +6,50 @@
   <title>France - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hotel-list { margin-top: 0.5rem; padding-left: 1rem; }
-    .hotel { margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .hotel span { margin-left: 0.3rem; color: gray; }
+    .read-more-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .read-more-toggle ~ .hotel-list {
+      display: none;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .read-more-toggle:checked ~ .hotel-list {
+      display: block;
+    }
+
+    .read-more-wrapper label {
+      cursor: pointer;
+      background: #ff6f61;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .read-more-wrapper label:hover {
+      background: #e85c50;
+    }
+
+    .read-more-toggle ~ label::after {
+      content: "Read More";
+    }
+
+    .read-more-toggle:checked ~ label::after {
+      content: "Back";
+    }
   </style>
 </head>
 <body>
+
 <header>
   <nav>
     <div class="brand">Travel With Me</div>
@@ -30,41 +68,61 @@
   <h1 class="center-heading">Top Wonders of France</h1>
 
   <div class="wonders">
+
+    <!-- Wonder 1 -->
     <div class="wonder-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower">
       <div class="info">
         <h4>Eiffel Tower</h4>
-        <p>Iconic iron tower in Paris offering panoramic city views and romantic ambiance.</p>
-        <div class="hotel-list">
-          <div class="hotel">Hotel Eiffel Seine - 0.3 km <span>⭐⭐⭐⭐ - $200/night</span></div>
-          <div class="hotel">Pullman Paris Tour Eiffel - 0.5 km <span>⭐⭐⭐⭐⭐ - $350/night</span></div>
+        <p>The iconic symbol of Paris with stunning panoramic views of the city.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="eiffel-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Hotel Eiffel Seine - 0.5 km <span>⭐⭐⭐⭐ - $180/night</span></div>
+            <div class="hotel">Pullman Paris Tour Eiffel - 1 km <span>⭐⭐⭐⭐⭐ - $320/night</span></div>
+          </div>
+          <label for="eiffel-toggle"></label>
         </div>
       </div>
     </div>
 
+    <!-- Wonder 2 -->
     <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Louvre_Museum_Wikimedia_Commons.jpg" alt="Louvre Museum">
-      <div class="info">
-        <h4>Louvre Museum</h4>
-        <p>World-famous museum in Paris housing masterpieces like the Mona Lisa and Venus de Milo.</p>
-        <div class="hotel-list">
-          <div class="hotel">Le Meurice - 0.6 km <span>⭐⭐⭐⭐⭐ - $400/night</span></div>
-          <div class="hotel">Hotel du Louvre - 0.2 km <span>⭐⭐⭐⭐ - $250/night</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wonder-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Notre_Dame_Cathedral_Wikimedia_Commons.jpg" alt="Notre Dame">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Notre_Dame_de_Paris_2013-07-24.jpg" alt="Notre Dame">
       <div class="info">
         <h4>Notre Dame Cathedral</h4>
-        <p>Historic gothic cathedral in Paris, known for its intricate architecture and stained glass windows.</p>
-        <div class="hotel-list">
-          <div class="hotel">Hotel Notre Dame - 0.3 km <span>⭐⭐⭐⭐ - $220/night</span></div>
-          <div class="hotel">Hotel Saint Jacques - 0.5 km <span>⭐⭐⭐ - $150/night</span></div>
+        <p>Historic Gothic cathedral with impressive architecture and centuries of history.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="notredame-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Hotel Notre Dame - 0.3 km <span>⭐⭐⭐⭐ - $200/night</span></div>
+            <div class="hotel">Hotel Le Notre Dame - 0.4 km <span>⭐⭐⭐ - $140/night</span></div>
+          </div>
+          <label for="notredame-toggle"></label>
         </div>
       </div>
     </div>
+
+    <!-- Wonder 3 -->
+    <div class="wonder-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Palace_of_Versailles.jpg" alt="Palace of Versailles">
+      <div class="info">
+        <h4>Palace of Versailles</h4>
+        <p>Opulent palace with magnificent gardens, the former royal residence of France.</p>
+
+        <div class="read-more-wrapper">
+          <input type="checkbox" id="versailles-toggle" class="read-more-toggle">
+          <div class="hotel-list">
+            <div class="hotel">Trianon Palace Versailles - 0.5 km <span>⭐⭐⭐⭐⭐ - $450/night</span></div>
+            <div class="hotel">Hotel Le Versailles - 0.6 km <span>⭐⭐⭐⭐ - $210/night</span></div>
+          </div>
+          <label for="versailles-toggle"></label>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
@@ -74,12 +132,9 @@
       <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
       <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
     </div>
-    <div class="copyright">© <span id="year"></span> Travel With Me</div>
+    <div class="copyright">© 2025 Travel With Me</div>
   </div>
 </footer>
 
-<!-- For Year -->
-  <div class="copyright">© 2025 Travel With Me</div>
-  
 </body>
 </html>
