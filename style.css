@@ -68,7 +68,7 @@ nav .menu a.active {
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
   background-size: cover;
   background-position: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 6rem 2rem; /* extra bottom padding for footer */
   color: white;
 }
 
@@ -286,13 +286,17 @@ nav .menu a.active {
   background: #e85c50;
 }
 
-/* Footer */
+/* Footer fixed at the bottom */
 footer {
+  position: fixed;      /* fixed at the bottom */
+  bottom: 0;            /* bottom of the viewport */
+  left: 0;              /* start from left edge */
+  width: 100%;          /* full width */
   background: #333;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
-  margin-top: auto; /* sticks footer at bottom */
+  z-index: 100;         /* ensure it stays above other content */
 }
 
 footer .footer-inner {
