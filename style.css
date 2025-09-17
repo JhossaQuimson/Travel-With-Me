@@ -25,9 +25,10 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* center the menu links */
+  justify-content: center; /* center navigation links */
   padding: 1rem 2rem;
   position: relative;
+  gap: 2rem;
 }
 
 nav .brand {
@@ -59,14 +60,16 @@ nav .menu a.active {
 /* Hero Section */
 .hero {
   flex: 1;
-  background-size: cover;
-  background-position: center;
-  color: white;
   display: flex;
   align-items: center;       /* vertical centering */
   justify-content: center;   /* horizontal centering */
   text-align: center;        /* center text inside hero-inner */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
   padding: 4rem 2rem;
+  color: white;
 }
 
 .hero-inner {
@@ -304,12 +307,19 @@ footer .copyright {
 }
 
 /* Responsive */
-@media (min-width: 720px) {
+@media (max-width: 720px) {
   nav {
-    justify-content: center; /* center links */
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   nav .brand {
-    left: 2rem; /* brand stays left */
+    left: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  nav {
+    justify-content: center; /* center links */
   }
 }
