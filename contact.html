@@ -1,189 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Travel With Me</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Global Styles */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: #ff6f61;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Header */
-    header {
-      background: #fff;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    header .brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #ff6f61;
-    }
-    header nav .menu {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    header nav .menu a.active {
-      font-weight: 700;
-      border-bottom: 2px solid #ff6f61;
-      padding-bottom: 2px;
-    }
-
-    /* Hero Section */
-    .hero-inner {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: linear-gradient(90deg, #ff6f61 0%, #ff9472 100%);
-      color: #fff;
-      border-radius: 15px;
-      margin: 2rem auto;
-      max-width: 1000px;
-    }
-    .hero-inner h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .hero-inner p.lead {
-      font-size: 1.2rem;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      display: flex;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    @media (max-width: 768px) {
-      .contact-section {
-        flex-direction: column;
-      }
-    }
-
-    /* Contact Info Card */
-    .contact-card {
-      flex: 1;
-      background: #fff;
-      border-radius: 15px;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    .contact-card h2 {
-      color: #ff6f61;
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-    }
-    .contact-card p {
-      color: #555;
-      line-height: 1.8;
-    }
-    .contact-card ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 1rem;
-    }
-    .contact-card ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Map Card */
-    .map-card {
-      flex: 1;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-    .map-card iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      border: none;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-    footer a {
-      color: #ff6f61;
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <div class="brand">Travel With Me</div>
-      <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="countries.html">Countries</a>
-        <a href="blog.html">Blog</a>
-        <a href="tips.html">Travel Tips</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Contact Us</h1>
-        <p class="lead">We’re here to help you plan your next adventure. Reach out to us or visit our office!</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <!-- Contact Info -->
-      <div class="contact-card">
-        <h2>Get in Touch</h2>
-        <p>We’re always ready to assist you. Reach us via email, phone, or visit our office:</p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:info@travelwithme.com">info@travelwithme.com</a></li>
-          <li><strong>Phone:</strong> +63 900 123 4567</li>
-          <li><strong>Address:</strong> 123 Adventure St, Manila, Philippines</li>
-        </ul>
-      </div>
-
-      <!-- Map -->
-      <div class="map-card">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.921258483859!2d120.982022!3d14.599512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c87c6f8f8a9d%3A0x505b1a1d3e7c3e!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1694942570000!5m2!1sen!2sus" 
-          allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div>
-    <div>Class Info: <strong>CIT_4304 - IT3G</strong></div>
-    <div>© 2025 Travel With Me</div>
-  </footer>
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Us | Travel With Me</title> 
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+  <body> 
+    <!-- Header --> 
+    <header> 
+      <div class="container"> 
+        <nav> 
+          <div class="brand">Travel With Me</div> 
+          <div class="menu"> <a href="index.html">Home</a> 
+            <a href="countries.html">Countries</a> 
+            <a href="blog.html">Blog</a> 
+            <a href="tips.html">Travel Tips</a> 
+            <a href="about.html">About</a> 
+            <a href="contact.html" class="active">Contact</a> 
+          </div> 
+        </nav> 
+      </div> 
+    </header> 
+    <!-- Hero Section --> 
+    <main class="container"> 
+      <section class="hero"> 
+        <div class="hero-inner"> 
+          <h1>Contact Us</h1> 
+          <p class="lead">We’d love to hear from you! Reach out with any questions or feedback.</p> 
+        </div> 
+      </section> 
+      <!-- Contact Section --> 
+      <section class="grid" style="padding:2rem 1rem; max-width:1000px; margin:2rem auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;"> 
+        <!-- Contact Info Card --> 
+        <div class="card" style="background:white; color:#333; box-shadow:0 6px 15px rgba(0,0,0,0.15); padding:2rem;"> 
+          <h2 style="color:#ff6f61; margin-bottom:1rem;">Get in Touch</h2>
+        <p>We’re always here to assist you. Reach out using the details below:</p> 
+          <ul style="list-style:none; padding-left:0; line-height:1.8;"> 
+            <li><strong>Email:</strong> <a href="mailto:info@travelwithme.com">info@travelwithme.com</a></li> 
+            <li><strong>Phone:</strong> +63 900 123 4567</li> 
+            <li><strong>Address:</strong> 123 Adventure St, Manila, Philippines</li> 
+          </ul> 
+        </div> 
+        <!-- Contact Form Card --> 
+        <div class="card" style="background:white; color:#333; box-shadow:0 6px 15px rgba(0,0,0,0.15); padding:2rem; display:flex; flex-direction:column;"> 
+          <h2 style="color:#ff6f61; margin-bottom:1rem;">Send Us a Message</h2> 
+          <p>Fill out the form below and we’ll get back to you as soon as possible.</p> 
+          <form class="contact-form" style="display:flex; flex-direction:column; gap:1rem;"> 
+            <label for="name">Your Name</label> 
+            <input type="text" id="name" placeholder="Enter your name" required> 
+            <label for="email">Your Email</label> 
+            <input type="email" id="email" placeholder="Enter your email" required> 
+            <label for="message">Message</label> 
+            <textarea id="message" rows="5" placeholder="Write your message" required></textarea> 
+            <button type="submit" style="align-self:center; max-width:200px;">Send Message</button> 
+          </form> 
+        </div> 
+        <!-- Map / Office Info Card --> 
+        <div class="card" style="background:white; color:#333; box-shadow:0 6px 15px rgba(0,0,0,0.15); padding:2rem;"> <h2 style="color:#ff6f61; margin-bottom:1rem;">Our Location</h2> 
+          <p>Visit our office or check our location on the map:</p> 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.921258483859!2d120.982022!3d14.599512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c87c6f8f8a9d%3A0x505b1a1d3e7c3e!2sManila%2C%20Metro%20Manila%2C%20Philippines!5e0!3m2!1sen!2sus!4v1694942570000!5m2!1sen!2sus" width="100%" height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe> 
+        </div> 
+      </section> 
+    </main> 
+    <!-- Footer --> 
+    <footer> 
+      <div class="footer-inner"> 
+        <div class="footer-top"> 
+          <div>Student Name: <strong>Quimson, Ma. Jhossa D.</strong></div> 
+          <div>Class Info: <strong>CIT_4304 - IT3G</strong></div> </div> 
+        <div class="copyright">© 2025 Travel With Me</div> 
+      </div> 
+    </footer> 
+  </body> 
 </html>
