@@ -5,6 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog - Travel With Me</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      background-color: #333;
+    }
+
+    nav .brand {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: color 0.3s;
+    }
+
+    nav .menu a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    nav .menu a:hover {
+      color: #ff6f61;
+    }
+
+    .center-heading {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ensures the image scales proportionally */
+      display: block;
+    }
+
+    .card h3 {
+      margin: 15px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card .date {
+      margin: 0 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .card p {
+      margin: 10px 15px 20px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer .footer-top div {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -28,7 +137,7 @@
   <!-- Main Content -->
   <main class="container">
     <h1 class="center-heading">Travel Blog</h1>
-    <div class="grid blog-grid">
+    <div class="blog-grid">
 
       <!-- Blog Post 1: Japan -->
       <div class="card">
@@ -68,7 +177,6 @@
     </div>
   </footer>
 
-  <!-- JS for dynamic year -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
