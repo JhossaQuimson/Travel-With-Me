@@ -5,59 +5,88 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to bottom, #fdf6e3, #f1f8ff);
   color: #333;
+  line-height: 1.6;
 }
 
 /* Header & Navigation */
 header {
   background: linear-gradient(90deg, #ff6f61, #ffcc70);
   color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 0.5rem;
 }
 
 nav {
-  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* brand + links aligned left */
+  padding: 1rem 2rem;
+  gap: 2rem;
 }
 
-nav a {
+nav .brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+
+nav .menu {
+  display: flex;
+  gap: 1rem;
+}
+
+nav .menu a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  padding: 0.3rem 0.6rem;
   transition: opacity 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+nav .menu a:hover,
+nav .menu a.active {
   opacity: 0.8;
   text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-  background: url('hero.jpg') no-repeat center center/cover;
+  flex: 1; /* allow hero to grow and push footer down */
+  background-size: cover;
+  background-position: center;
   color: white;
-  text-align: center;
-  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: left;
 }
 
-.hero h2 {
+.hero-inner h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-.hero p {
-  font-size: 1.2rem;
+.hero-inner p.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  background: #ff6f61;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e85c50;
 }
 
 /* Content */
@@ -248,9 +277,31 @@ nav a.active {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
   background: #333;
   color: white;
-  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: auto; /* ensures footer sticks to bottom */
+}
+
+footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (min-width: 720px) {
+  nav {
+    justify-content: flex-start; /* brand + menu left-aligned */
+  }
+
+  nav .brand {
+    margin-right: 2rem;
+  }
 }
