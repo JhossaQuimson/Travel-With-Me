@@ -16,7 +16,6 @@ html, body {
 }
 
 /* Header & Navigation */
-/* Header & Navigation */
 header {
   background: linear-gradient(90deg, #ff6f61, #ffcc70);
   color: white;
@@ -59,7 +58,7 @@ nav .menu a.active {
 
 /* Hero Section */
 .hero {
-  flex: 1; /* allow hero to grow and push footer down */
+  flex: 1;
   background-size: cover;
   background-position: center;
   color: white;
@@ -290,7 +289,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 2rem;
-  margin-top: auto; /* ensures footer sticks to bottom */
+  margin-top: auto;
 }
 
 footer .footer-inner {
@@ -307,10 +306,10 @@ footer .copyright {
 /* Responsive */
 @media (min-width: 720px) {
   nav {
-    justify-content: flex-start; /* brand + menu left-aligned by default */
+    justify-content: center; /* center links */
   }
 
   nav .brand {
-    margin-right: 2rem;
+    left: 2rem; /* brand stays left */
   }
 }
