@@ -59,7 +59,6 @@ nav .menu a.active {
 
 /* Hero Section */
 .hero {
-  .hero {
   flex: 1; /* fills remaining space */
   display: flex;
   align-items: center;    /* vertical centering */
@@ -72,7 +71,6 @@ nav .menu a.active {
   padding: 2rem;
   color: white;           /* hero text white */
   min-height: calc(100vh - 60px); /* ensures hero fills most of viewport, adjust 60px if header height changes */
-}
 }
 
 .hero-inner {
